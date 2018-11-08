@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.web.battery.mapper.AdminMapper">
+
+    <select id="getAdmin" resultType="Admin">
+        select * from auth_user
+    </select>
+
+    <insert id="addAdmin">
+        insert into Admin
+        value(3,'a')
+    </insert>
+
+</mapper>

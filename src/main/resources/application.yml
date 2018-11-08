@@ -1,0 +1,13 @@
+server:
+  port: 8080
+spring:
+  profiles:
+    include: druid
+  security:
+    user:
+      password: admin
+  thymeleaf:
+    cache: false
+mybatis:
+  type-aliases-package: com.web.battery.entity
+  mapper-locations: /mapper/*.xml

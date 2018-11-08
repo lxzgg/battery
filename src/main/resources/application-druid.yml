@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/battery
+      username: root
+      password: sa
+      connection-properties: useSSL=false;serverTimezone=Asia/Shanghai
+      min-idle: 10
+      max-active: 10
+      filters: stat,wall
+      web-stat-filter.exclusions: "*.js,*.gif,*.jpg,*.bmp,*.png,*.css,*.ico,/druid,/druid/*"
+      #      stat-view-servlet.login-username: sa
+      #      stat-view-servlet.login-password: sa
+      aop-patterns: com.*.mapper.*
+      filter.config.enabled: true
+      stat-view-servlet:
+        reset-enable: false
